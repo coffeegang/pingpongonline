@@ -29,8 +29,9 @@ score = [0, 0]
 def draw(): 
     screen.fill ((0,0,0))
     all_objects.draw(screen)
-    draw_text(screen, str(score[0]), 20, screen_rect.right/2, 5)
-
+    draw_text(screen, str(score[0]), 20, screen_rect.right/2-10, 5)
+    draw_text(screen, str(score[1]), 20, screen_rect.right/2+10, 5)    
+    draw_text(screen, "|", 20, screen_rect.right/2, 2)
 
 # drawing text
 def draw_text(surf, text, size, x, y):

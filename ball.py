@@ -43,5 +43,4 @@ class Ball(pygame.sprite.Sprite):
 
         if self.rect.top < 0 or self.rect.bottom > self.screen_rect.bottom:
             self.dir[1] = -self.dir[1]
-        
 

@@ -1,5 +1,3 @@
-
-
 class AI:
     def __init__(self, rocket, ball):
         self.rocket = rocket
