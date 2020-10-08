@@ -20,6 +20,7 @@ all_objects = pygame.sprite.Group()
 ball = ball.Ball(weight/2, height/2, screen_rect)
 rocket_right = rockets.Rockets (weight - 30, height/2, screen_rect)
 all_objects.add (ball, rocket_right)
+score = [0, 0]
 
 
 # func for obj drawing
@@ -27,9 +28,10 @@ def draw():
     screen.fill ((0,0,0))
     all_objects.draw(screen)
 
+
 # updating func
 def update():
-    ball.move()
+    ball.move(rocket_right.rect, score)
     rocket_right.move()
     pygame.display.flip ()
 
