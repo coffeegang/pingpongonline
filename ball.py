@@ -1,4 +1,3 @@
-
 import pygame
 from pygame.locals import *
 
@@ -28,12 +27,9 @@ class Ball(pygame.sprite.Sprite):
     def check_collide(self, rocket_rects, score):
         if self.rect.right > rocket_rects[0].left and (rocket_rects[0].top < self.rect.y < rocket_rects[0].bottom):
             self.dir[0] = -self.dir[0]
-            self.hits += 1
         
         if self.rect.left < rocket_rects[1].right and (rocket_rects[1].top < self.rect.y < rocket_rects[1].bottom):
             self.dir[0] = -self.dir[0]
-            self.hits += 1
-        
 
 
 
